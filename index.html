@@ -1,64 +1,119 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dos Nombres Café</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dos Nombres Café</title>
 
-    <style>
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-        }
+<style>
 
-        body{
-            background:#0a0a0a;
-            color:white;
-            font-family:Arial, sans-serif;
-        }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-        header{
-            text-align:center;
-            padding:80px 20px;
-        }
+body{
+    background:#000;
+    color:white;
+    font-family:Arial, sans-serif;
+}
 
-        h1{
-            color:#d4af37;
-            font-size:60px;
-        }
+nav{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    padding:25px;
+    background:#0a0a0a;
+}
 
-        .slogan{
-            font-size:22px;
-            margin-top:15px;
-            color:#f5f5f5;
-        }
+nav a{
+    color:#d4af37;
+    text-decoration:none;
+    font-weight:bold;
+}
 
-        .btn{
-            display:inline-block;
-            margin-top:30px;
-            background:#d4af37;
-            color:black;
-            padding:15px 30px;
-            text-decoration:none;
-            border-radius:8px;
-            font-weight:bold;
-        }
+.hero{
+    min-height:90vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
 
-        section{
-            padding:60px 20px;
-            text-align:center;
-        }
+.logo{
+    width:250px;
+    max-width:80%;
+    margin-bottom:25px;
+}
 
-        h2{
-            color:#d4af37;
-            margin-bottom:20px;
-        }
-    </style>
+h1{
+    color:#d4af37;
+    font-size:60px;
+    margin-bottom:15px;
+}
+
+.slogan{
+    font-size:24px;
+    max-width:700px;
+    margin-bottom:30px;
+}
+
+.btn{
+    background:#d4af37;
+    color:black;
+    padding:15px 35px;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+section{
+    padding:80px 20px;
+    text-align:center;
+}
+
+h2{
+    color:#d4af37;
+    margin-bottom:20px;
+}
+
+.whatsapp{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    color:white;
+    text-decoration:none;
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:28px;
+}
+
+</style>
+
 </head>
+
 <body>
 
-<header>
+<nav>
+    <a href="#">Inicio</a>
+    <a href="#">Nosotros</a>
+    <a href="#">Menú</a>
+    <a href="#">Galería</a>
+    <a href="#">Contacto</a>
+</nav>
+
+<section class="hero">
+
+    <img src="dosnombres logo.jpeg" class="logo">
+
     <h1>DOS NOMBRES CAFÉ</h1>
 
     <p class="slogan">
@@ -68,16 +123,23 @@
     <a class="btn" href="#">
         Reservar por WhatsApp
     </a>
-</header>
+
+</section>
 
 <section>
-    <h2>Nuestro Concepto</h2>
+
+    <h2>Nuestra Experiencia</h2>
 
     <p>
-        Café, brunch y experiencias que unen sabores,
-        recuerdos y momentos especiales.
+        Un espacio donde el café, el brunch y los recuerdos
+        se encuentran para crear momentos inolvidables.
     </p>
+
 </section>
+
+<a class="whatsapp" href="#">
+    ☎
+</a>
 
 </body>
 </html>
