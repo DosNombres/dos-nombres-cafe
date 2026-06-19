@@ -2,345 +2,121 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dos Nombres Café</title>
 
-<title>Dos Nombres Café</title>
+    <link rel="stylesheet" href="style.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-scroll-behavior:smooth;
-}
-
-body{
-background:#050505;
-color:white;
-font-family:'Poppins',sans-serif;
-}
-
-:root{
---gold:#D4AF37;
---black:#050505;
-}
-
-nav{
-position:fixed;
-top:0;
-width:100%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 8%;
-background:rgba(0,0,0,.95);
-backdrop-filter:blur(10px);
-z-index:1000;
-}
-
-.logo-nav{
-height:70px;
-border-radius:50%;
-}
-
-.menu{
-display:flex;
-gap:35px;
-}
-
-.menu a{
-color:var(--gold);
-text-decoration:none;
-font-weight:500;
-}
-
-.hero{
-min-height:100vh;
-background:
-linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.75)),
-url("https://images.unsplash.com/photo-1509042239860-f550ce710b93");
-background-size:cover;
-background-position:center;
-display:flex;
-justify-content:center;
-align-items:center;
-text-align:center;
-padding:120px 20px;
-}
-
-.hero-content{
-max-width:900px;
-}
-
-.hero img{
-width:220px;
-margin-bottom:30px;
-border-radius:50%;
-}
-
-.hero h1{
-font-family:'Cormorant Garamond',serif;
-font-size:5rem;
-color:var(--gold);
-margin-bottom:10px;
-}
-
-.hero h2{
-font-weight:300;
-font-size:1.5rem;
-margin-bottom:35px;
-}
-
-.hero p{
-max-width:700px;
-margin:auto;
-line-height:1.8;
-margin-bottom:35px;
-}
-
-.btn{
-display:inline-block;
-padding:16px 35px;
-background:var(--gold);
-color:black;
-text-decoration:none;
-font-weight:700;
-border-radius:8px;
-}
-
-.section{
-padding:90px 8%;
-}
-
-.section-title{
-text-align:center;
-font-size:3rem;
-color:var(--gold);
-font-family:'Cormorant Garamond',serif;
-margin-bottom:50px;
-}
-
-.cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-}
-
-.card{
-background:#111;
-padding:30px;
-border:1px solid rgba(212,175,55,.2);
-border-radius:12px;
-text-align:center;
-}
-
-.card h3{
-color:var(--gold);
-margin-bottom:15px;
-}
-
-.info{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:30px;
-}
-
-.info-box{
-background:#111;
-padding:30px;
-border-radius:12px;
-}
-
-.info-box h3{
-color:var(--gold);
-margin-bottom:15px;
-}
-
-footer{
-background:#0a0a0a;
-padding:40px;
-text-align:center;
-border-top:1px solid rgba(212,175,55,.2);
-}
-
-.whatsapp{
-position:fixed;
-right:25px;
-bottom:25px;
-width:70px;
-height:70px;
-border-radius:50%;
-background:#25D366;
-display:flex;
-justify-content:center;
-align-items:center;
-font-size:32px;
-text-decoration:none;
-color:white;
-box-shadow:0 0 20px rgba(0,0,0,.4);
-}
-
-@media(max-width:768px){
-
-.hero h1{
-font-size:3rem;
-}
-
-.menu{
-display:none;
-}
-
-.logo-nav{
-height:55px;
-}
-
-}
-
-</style>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
 <nav>
 
-<img src="images/dosnombres logo.jpeg" class="logo-nav">
+    <img src="images/dosnombres logo.jpeg" class="logo-nav">
 
-<div class="menu">
-<a href="#inicio">Inicio</a>
-<a href="#nosotros">Nosotros</a>
-<a href="#especiales">Especialidades</a>
-<a href="#contacto">Contacto</a>
-</div>
+    <div class="menu">
+        <a href="#inicio">Inicio</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#especialidades">Especialidades</a>
+        <a href="#contacto">Contacto</a>
+    </div>
 
 </nav>
 
 <section class="hero" id="inicio">
 
-<div class="hero-content">
+    <div class="hero-content">
 
-<img src="images/dosnombres logo.jpeg">
+        <img src="images/dosnombres logo.jpeg" class="hero-logo">
 
-<h1>Dos Nombres Café</h1>
+        <h1>Dos Nombres Café</h1>
 
-<h2>Donde el alma tiene sabor a recuerdo.</h2>
+        <h2>Donde el alma tiene sabor a recuerdo.</h2>
 
-<p>
-Disfruta café local, desayunos, brunch y panadería artesanal
-en un espacio diseñado para compartir momentos inolvidables.
-</p>
+        <p>
+            Disfruta café local, desayunos, brunch y panadería artesanal
+            en un espacio diseñado para compartir momentos inolvidables.
+        </p>
 
-<a href="#" class="btn">
-Reservar por WhatsApp
-</a>
+        <a href="#" class="btn">
+            Reservar por WhatsApp
+        </a>
 
-</div>
+    </div>
+
+</section>
+
+<section class="info-bar">
+
+    <div>
+        <h3>📍 Ubicación</h3>
+        <p>Cra 19 No. 18-113 Piso 1<br>Edificio Salyfe</p>
+    </div>
+
+    <div>
+        <h3>🕒 Horario</h3>
+        <p>Lunes a Domingo<br>8:00 AM - 5:00 PM</p>
+    </div>
+
+    <div>
+        <h3>☕ Especialidades</h3>
+        <p>Brunch<br>Panadería Artesanal</p>
+    </div>
+
+    <div>
+        <h3>📱 Instagram</h3>
+        <p>@dosnombrescafe</p>
+    </div>
 
 </section>
 
 <section class="section" id="nosotros">
 
-<h2 class="section-title">Nuestra Esencia</h2>
+    <h2>Nuestra Esencia</h2>
 
-<div class="info">
+    <div class="cards">
 
-<div class="info-box">
-<h3>Café Local</h3>
-<p>
-Seleccionamos café colombiano de calidad para ofrecer
-una experiencia auténtica en cada taza.
-</p>
-</div>
+        <div class="card">
+            <h3>Café Local</h3>
+            <p>Seleccionamos café colombiano de calidad para cada taza.</p>
+        </div>
 
-<div class="info-box">
-<h3>Brunch y Desayunos</h3>
-<p>
-Opciones frescas y deliciosas para comenzar el día
-o disfrutar una pausa especial.
-</p>
-</div>
+        <div class="card">
+            <h3>Brunch y Desayunos</h3>
+            <p>Sabores frescos para disfrutar cualquier momento del día.</p>
+        </div>
 
-</div>
+    </div>
 
 </section>
 
-<section class="section" id="especiales">
+<section class="section" id="especialidades">
 
-<h2 class="section-title">Nuestros Esenciales</h2>
+    <h2>Nuestros Esenciales</h2>
 
-<div class="cards">
+    <div class="cards">
 
-<div class="card">
-<h3>☕ Café</h3>
-<p>Café local preparado con dedicación.</p>
-</div>
+        <div class="card">☕ Café</div>
+        <div class="card">🍳 Brunch</div>
+        <div class="card">🥐 Panadería</div>
+        <div class="card">🍽️ Desayunos</div>
 
-<div class="card">
-<h3>🍳 Brunch</h3>
-<p>Combinaciones ideales para compartir.</p>
-</div>
-
-<div class="card">
-<h3>🥐 Panadería</h3>
-<p>Productos artesanales recién horneados.</p>
-</div>
-
-<div class="card">
-<h3>🍽️ Desayunos</h3>
-<p>Opciones deliciosas para todos los gustos.</p>
-</div>
-
-</div>
+    </div>
 
 </section>
 
-<section class="section" id="contacto">
-
-<h2 class="section-title">Visítanos</h2>
-
-<div class="info">
-
-<div class="info-box">
-<h3>📍 Ubicación</h3>
-<p>
-Cra 19 No. 18-113 Piso 1<br>
-Edificio Salyfe<br>
-Dosquebradas, Risaralda
-</p>
-</div>
-
-<div class="info-box">
-<h3>🕒 Horario</h3>
-<p>
-Lunes a Domingo<br>
-8:00 AM - 5:00 PM
-</p>
-</div>
-
-<div class="info-box">
-<h3>📱 Instagram</h3>
-<p>
-@dosnombrescafe
-</p>
-</div>
-
-</div>
-
-</section>
-
-<footer>
-
-<p>© 2026 Dos Nombres Café - Todos los derechos reservados.</p>
-
+<footer id="contacto">
+    <p>© 2026 Dos Nombres Café</p>
 </footer>
 
-<a class="whatsapp" href="#">
-💬
-</a>
+<a href="#" class="whatsapp">💬</a>
+
+<script src="script.js"></script>
 
 </body>
 </html>
 ```
+
