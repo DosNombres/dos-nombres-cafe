@@ -20,11 +20,12 @@ font-family:'Poppins',sans-serif;
 nav{
 position:fixed;
 top:0;
+left:0;
 width:100%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:20px 8%;
+padding:15px 40px;
 background:rgba(0,0,0,.95);
 z-index:1000;
 }
@@ -36,7 +37,8 @@ border-radius:50%;
 
 .menu{
 display:flex;
-gap:35px;
+gap:25px;
+flex-wrap:wrap;
 }
 
 .menu a{
