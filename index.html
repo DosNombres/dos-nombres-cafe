@@ -6,484 +6,263 @@
 
 <title>Dos Nombres Café</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-
 <style>
 
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-scroll-behavior:smooth;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
-background:#050505;
-color:white;
-font-family:'Poppins',sans-serif;
+    font-family:Arial,sans-serif;
+    background:#f8f5ef;
 }
 
-:root{
---gold:#D4AF37;
---black:#050505;
+/* HERO */
+
+header{
+    background:#000;
+    color:#fff;
+    text-align:center;
+    padding:80px 20px;
+    min-height:70vh;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
 }
 
-nav{
-position:fixed;
-top:0;
-width:100%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 8%;
-background:rgba(0,0,0,.95);
-backdrop-filter:blur(10px);
-z-index:1000;
+.logo{
+    width:220px;
+    max-width:80%;
+    margin-bottom:30px;
 }
 
-.logo-nav{
-height:70px;
-border-radius:50%;
+h1{
+    color:#D4AF37;
+    font-size:3rem;
+    margin-bottom:25px;
 }
 
-.menu{
-display:flex;
-gap:35px;
+.historia{
+    max-width:900px;
+    color:white;
+    line-height:1.8;
+    font-size:1.2rem;
+    margin-bottom:40px;
 }
 
-.menu a{
-color:var(--gold);
-text-decoration:none;
-font-weight:500;
+.boton{
+    display:inline-block;
+    background:#D4AF37;
+    color:black;
+    text-decoration:none;
+    padding:15px 40px;
+    border-radius:40px;
+    font-weight:bold;
+    font-size:1.1rem;
+    transition:.3s;
 }
 
-.hero{
-min-height:100vh;
-background:
-linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.75)),
-url("https://images.unsplash.com/photo-1509042239860-f550ce710b93");
-background-size:cover;
-background-position:center;
-display:flex;
-justify-content:center;
-align-items:center;
-text-align:center;
-padding:120px 20px;
+.boton:hover{
+    transform:scale(1.05);
 }
 
-.hero-content{
-max-width:900px;
+/* MENU */
+
+.menu-titulo{
+    text-align:center;
+    padding:60px 20px 20px;
 }
 
-.hero img{
-width:220px;
-margin-bottom:30px;
-border-radius:50%;
+.menu-titulo h2{
+    color:#b68d2a;
+    font-size:42px;
 }
 
-.hero h1{
-font-family:'Cormorant Garamond',serif;
-font-size:5rem;
-color:var(--gold);
-margin-bottom:10px;
+.menu-titulo p{
+    max-width:700px;
+    margin:20px auto;
+    color:#555;
+    line-height:1.7;
 }
 
-.hero h2{
-font-weight:300;
-font-size:1.5rem;
-margin-bottom:35px;
+h3{
+    text-align:center;
+    font-size:2rem;
+    margin-top:40px;
 }
 
-.hero p{
-max-width:700px;
-margin:auto;
-line-height:1.8;
-margin-bottom:35px;
+.productos{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+    padding:30px;
 }
 
-.btn{
-display:inline-block;
-padding:16px 35px;
-background:var(--gold);
-color:black;
-text-decoration:none;
-font-weight:700;
-border-radius:8px;
+.producto{
+    width:350px;
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+    cursor:pointer;
+    transition:.3s;
 }
 
-.section{
-padding:90px 8%;
+.producto:hover{
+    transform:translateY(-5px);
 }
 
-.section-title{
-text-align:center;
-font-size:3rem;
-color:var(--gold);
-font-family:'Cormorant Garamond',serif;
-margin-bottom:50px;
+.producto img{
+    width:100%;
+    height:260px;
+    object-fit:cover;
 }
 
-.cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
+.producto h4{
+    padding:20px;
+    font-size:1.5rem;
 }
 
-.card{
-background:#111;
-padding:30px;
-border:1px solid rgba(212,175,55,.2);
-border-radius:12px;
-text-align:center;
+/* MODAL */
+
+.modal{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.8);
+    z-index:999;
 }
 
-.card h3{
-color:var(--gold);
-margin-bottom:15px;
+.modal-contenido{
+    background:white;
+    width:90%;
+    max-width:900px;
+    margin:40px auto;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.modal-contenido img{
+    width:100%;
+    max-height:500px;
+    object-fit:cover;
 }
 
 .info{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:30px;
+    padding:30px;
 }
 
-.info-box{
-background:#111;
-padding:30px;
-border-radius:12px;
-}
-
-.info-box h3{
-color:var(--gold);
-margin-bottom:15px;
-}
-
-footer{
-background:#0a0a0a;
-padding:40px;
-text-align:center;
-border-top:1px solid rgba(212,175,55,.2);
-}
-
-.whatsapp{
-position:fixed;
-right:25px;
-bottom:25px;
-width:70px;
-height:70px;
-border-radius:50%;
-background:#25D366;
-display:flex;
-justify-content:center;
-align-items:center;
-font-size:32px;
-text-decoration:none;
-color:white;
-box-shadow:0 0 20px rgba(0,0,0,.4);
-}
-```css
-.menu-container{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:40px;
-margin-top:50px;
-}
-
-.menu-column{
-display:flex;
-flex-direction:column;
-gap:25px;
-}
-
-.menu-block{
-background:#111;
-padding:30px;
-border-radius:15px;
-border:1px solid rgba(212,175,55,.2);
-}
-
-.menu-block h3{
-color:#D4AF37;
-margin-bottom:15px;
-font-size:1.3rem;
-}
-
-.menu-block ul{
-list-style:none;
-padding:0;
-}
-
-.menu-block li{
-padding:8px 0;
-border-bottom:1px solid rgba(255,255,255,.08);
-}
-
-.menu-block li:last-child{
-border-bottom:none;
-}
-
-.menu-note{
-text-align:center;
-margin-top:40px;
-color:#D4AF37;
-font-style:italic;
-}
-
-@media(max-width:768px){
-
-.menu-container{
-grid-template-columns:1fr;
-}
-
-}
-```
-
-@media(max-width:768px){
-
-.hero h1{
-font-size:3rem;
-}
-
-.menu{
-display:none;
-}
-
-.logo-nav{
-height:55px;
-}
-
+.cerrar{
+    position:absolute;
+    top:15px;
+    right:25px;
+    color:white;
+    font-size:45px;
+    cursor:pointer;
 }
 
 </style>
 </head>
-
 <body>
 
-<nav>
+<header>
 
-<img src="images/dosnombres logo.jpeg" class="logo-nav">
+    <img src="logo.jpg" class="logo">
 
-<div class="menu">
-<a href="#inicio">Inicio</a>
-<a href="#nosotros">Nosotros</a>
-<a href="#menu">Menú</a>
-<a href="#galeria">Galería</a>
-<a href="#contacto">Contacto</a>
-</div>
+    <h1>Dos Nombres Café</h1>
 
-</nav>
+    <p class="historia">
+        Dos Nombres Café nació del sueño de dos hermanas que creen que el café tiene el poder de devolvernos a momentos especiales.
+        Cada taza y cada plato buscan despertar recuerdos que alimentan el alma.
+    </p>
 
-<section class="hero" id="inicio">
+    <a href="#menu" class="boton">
+        Ver Menú
+    </a>
 
-<div class="hero-content">
+</header>
 
-<img src="images/dosnombres logo.jpeg">
+<section class="menu-titulo" id="menu">
 
-<h1>Dos Nombres Café</h1>
+    <h2>Nuestro Menú</h2>
 
-<h2>Donde el alma tiene sabor a recuerdo.</h2>
-
-<p>
-Disfruta café local, desayunos, brunch y panadería artesanal
-en un espacio diseñado para compartir momentos inolvidables.
-</p>
-
-<a href="#" class="btn">
-Reservar por WhatsApp
-</a>
-
-</div>
+    <p>
+        Cada bebida y cada plato han sido elegidos para crear momentos que merecen ser recordados.
+    </p>
 
 </section>
 
-<section class="section" id="nosotros">
+<h3>Cafés Calientes</h3>
 
-<h2 class="section-title">Nuestra Esencia</h2>
+<div class="productos">
 
-<div class="card" style="max-width:900px;margin:auto;text-align:center;">
+    <div class="producto"
+    onclick="abrirProducto(
+    'Capuchino',
+    'https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=1200',
+    'Preparado con espresso y leche vaporizada, coronado con una espuma cremosa y delicada.')">
 
-<p style="font-size:1.2rem;line-height:1.8;">
-Dos Nombres Café nació del sueño de dos hermanas que creen que el café tiene el poder de devolvernos a momentos especiales. Cada taza y cada plato buscan despertar recuerdos que alimentan el alma.
-</p>
+        <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=600">
 
-
-</div>
-
-<div class="cards" style="margin-top:50px;">
-
-<div class="card">
-<h3>Café de Calidad</h3>
-<p>Seleccionamos cuidadosamente nuestros ingredientes para ofrecer una experiencia auténtica en cada taza.</p>
-</div>
-
-<div class="card">
-<h3>Panadería Artesanal</h3>
-<p>Productos frescos elaborados para acompañar cada momento del día.</p>
-</div>
-
-<div class="card">
-<h3>Brunch & Desayunos</h3>
-<p>Opciones pensadas para compartir, disfrutar y crear nuevos recuerdos.</p>
-</div>
-
-<div class="card">
-<h3>Hecho con Pasión</h3>
-<p>Cada detalle de Dos Nombres Café nace del cariño por el buen café y los momentos especiales.</p>
-</div>
-
-</div>
-
-</section>
-  
-<section class="section" id="menu">
-
-<h2 class="section-title">Nuestro Menú</h2>
-
-<div class="menu-container">
-
-    <div class="menu-column">
-
-        <div class="menu-block">
-            <h3>Bebidas Calientes</h3>
-            <ul>
-                <li>Espresso</li>
-                <li>Americano</li>
-                <li>Bombon</li>
-                <li>Latte</li>
-                <li>Cappuccino</li>
-                <li>Mocaccino</li>
-                <li>Milo (Agua/Leche)</li>
-                <li>Chocolate (Agua/Leche)</li>
-                <li>Colada de la Casa</li>
-            </ul>
-        </div>
-
-        <div class="menu-block">
-            <h3>Tés e Infusiones</h3>
-            <ul>
-                <li>Té Chai</li>
-                <li>Aromática</li>
-            </ul>
-        </div>
-
-        <div class="menu-block">
-            <h3>Bebidas Frías con Café</h3>
-            <ul>
-                <li>Espresso Tonic</li>
-                <li>Iced Caramel Macchiato</li>
-                <li>Spanish Latte</li>
-                <li>Frappe de Café</li>
-                <li>Latte Frío</li>
-            </ul>
-        </div>
-
-        <div class="menu-block">
-            <h3>Bebidas Frías sin Café</h3>
-            <ul>
-                <li>Limonada de Coco</li>
-                <li>Limonada Natural</li>
-                <li>Soda Frutos Rojos</li>
-                <li>Soda Frutos Amarillos</li>
-                <li>Milo Frío</li>
-                <li>Frappe de Oreo</li>
-                <li>Jugos Naturales</li>
-            </ul>
-        </div>
+        <h4>Capuchino</h4>
 
     </div>
 
-    <div class="menu-column">
+</div>
 
-        <div class="menu-block">
-            <h3>Desayunos</h3>
-            <ul>
-                <li>Huevos al gusto con pan artesanal y tocineta</li>
-                <li>Tostada de Aguacate</li>
-                <li>Tostada de Pollo</li>
-            </ul>
-        </div>
+<div class="modal" id="modal">
 
-        <div class="menu-block">
-            <h3>Bowls</h3>
-            <ul>
-                <li>Bowl Yogur</li>
-                <li>Bowl Tropical</li>
-            </ul>
-        </div>
+    <span class="cerrar" onclick="cerrarProducto()">&times;</span>
 
-        <div class="menu-block">
-            <h3>Waffles</h3>
-            <ul>
-                <li>Waffle Frutos Rojos</li>
-                <li>Waffle Pollo & Miel</li>
-                <li>Waffle Banano y Chocolate</li>
-            </ul>
-        </div>
+    <div class="modal-contenido">
 
-        <div class="menu-block">
-            <h3>Sándwiches</h3>
-            <ul>
-                <li>Bikini</li>
-                <li>Sándwich de Pollo</li>
-                <li>Sándwich Dos Nombres</li>
-            </ul>
+        <img id="fotoGrande">
+
+        <div class="info">
+
+            <h2 id="titulo"></h2>
+
+            <p id="descripcion"></p>
+
         </div>
 
     </div>
 
 </div>
 
-<p class="menu-note">
-</p>
+<script>
 
-</section>
+function abrirProducto(nombre,foto,descripcion){
 
-<section class="section" id="contacto">
+    document.getElementById("modal").style.display="block";
 
-<h2 class="section-title">Visítanos</h2>
+    document.getElementById("titulo").innerText=nombre;
 
-<div class="info">
+    document.getElementById("fotoGrande").src=foto;
 
-<div class="info-box">
-<h3>📍 Ubicación</h3>
-<p>
-Cra 19 No. 18-113 Piso 1<br>
-Edificio Salyfe<br>
-Dosquebradas, Risaralda
-</p>
-</div>
+    document.getElementById("descripcion").innerText=descripcion;
 
-<div class="info-box">
-<h3>🕒 Horario</h3>
-<p>
-Lunes a Domingo<br>
-8:00 AM - 5:00 PM
-</p>
-</div>
+}
 
-<div class="info-box">
-<h3>📱 Instagram</h3>
-<p>
-@dosnombrescafe
-</p>
-</div>
+function cerrarProducto(){
 
-</div>
+    document.getElementById("modal").style.display="none";
 
-</section>
+}
 
-<footer>
-
-<p>© 2026 Dos Nombres Café - Todos los derechos reservados.</p>
-
-</footer>
-
-<a class="whatsapp" href="#">
-💬
-</a>
+</script>
 
 </body>
 </html>
-
-
